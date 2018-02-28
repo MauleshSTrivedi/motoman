@@ -19,7 +19,7 @@
   <p>
       Joint limits and maximum joint velocities are based on the information 
       found in the online 
-      https://cdn2.hubspot.net/hubfs/366775/Robots/MH50II-20.pdf
+      https://www.motoman.com/industrial-robots/mh50-ii
       All urdfs are based on the default motion and joint velocity limits, 
       unless noted otherwise.
     </p>
