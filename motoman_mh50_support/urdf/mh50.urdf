@@ -126,9 +126,9 @@
     <origin rpy="0 0 0" xyz="-0.0 -0.0095 0.870"/>
     <axis xyz="0 -1 0"/>
     <!-- Old limits: lower="-2.96706" upper="4.38078" 
-                   The new limits below were measured from an MH5F.  They ensure 
+                   The new limits below were measured from an MH50F.  They ensure 
  		   that link_r won't hit link_l even when joint_r is at 45 degrees.  
-		   The old limits were converted directly from the MH5 data sheet,
+		   The old limits were converted directly from the MH50 data sheet,
 		   which was clearly way off. -->
     <limit effort="100" lower="-1.55" upper="4.014" velocity="2.96"/>
   </joint>
