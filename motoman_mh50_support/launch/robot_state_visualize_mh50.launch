@@ -3,18 +3,18 @@
   Manipulator specific version of the state visualizer.
 
   Defaults provided for mh50:
-   - 7 joints
+   - 6 joints
 
   Usage:
-    robot_state_visualize_sia20d.launch robot_ip:=<value> controller:=<fs100|dx200>
+    robot_state_visualize_mh50.launch robot_ip:=<value> controller:=<dx200>
 -->
 <launch>
-	<arg name="robot_ip" doc="IP of controller" />
+	<arg name="robot_ip" />
 
-  <!-- controller: Controller name (fs100 or dx200) -->
-  <arg name="controller" doc="Series of the controller (dx100, dx200, fs100 or yrc1000)"/>
+  <!-- controller: Controller name (dx200) -->
+  <arg name="controller" />
 
-	<rosparam command="load" file="$(find motoman_mh50_support)/config/joint_names_mh50.yaml" />
+    <rosparam command="load" file="$(find motoman_mh50_support)/config/joint_names_mh50.yaml" />
 
 	<include file="$(find motoman_driver)/launch/robot_state_$(arg controller).launch">
 		<arg name="robot_ip"   value="$(arg robot_ip)" />

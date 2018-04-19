@@ -1,7 +1,7 @@
 
 <package>
  <name>motoman_mh50_support</name>
- <version>0.3.5</version>
+ <version>0.1.0</version>
  <description>
   <p>
       ROS Industrial support for the Motoman mh50 (and variants).
@@ -19,7 +19,7 @@
   <p>
       Joint limits and maximum joint velocities are based on the information 
       found in the online 
-      https://www.motoman.com/industrial-robots/mh50-ii
+      https://www.motoman.com/hubfs/Robots/mh50.pdf
       All urdfs are based on the default motion and joint velocity limits, 
       unless noted otherwise.
     </p>
@@ -29,7 +29,7 @@
       robot model and configuration you intend to use them with.
     </p>
  </description>
- <author>Shaun Edwards</author>
+ <author>Eric Marcil</author>
  <maintainer email="shaun.edwards@gmail.com"/>
  <license>BSD</license>
  <url type="website">http://ros.org/wiki/motoman_mh50_support</url>

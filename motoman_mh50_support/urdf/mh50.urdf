@@ -4,161 +4,172 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="motoman_mh50" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Properties -->
+  <material name="yaskawa_blue">
+    <color rgba="0.12941 0.14902 0.74902 1"/>
+  </material>
   <!-- link list -->
   <link name="base_link">
     <visual>
-      <origin rpy="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_BASE_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_BASE.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0.8 0.8 .8 1"/>
-      </material>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.086 0 0.1295"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.635 0.470 0.259"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_BASE.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <link name="link_s">
     <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.540"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_S_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_S_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.540"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/collision/MH50_S_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_S_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <link name="link_l">
     <visual>
-      <!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-0.145 0 -0.540"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_L_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_L_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-0.145 0 -0.540"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/collision/MH50_L_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_L_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <link name="link_u">
     <visual>
-      <!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-0.145 0 -1.410"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_U_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_U_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-0.145 0 -1.410"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/collision/MH50_U_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_U_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <link name="link_r">
     <visual>
-      <!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-1.170 0 -1.620"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_R_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_R_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-1.170 0 -1.620"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/collision/MH50_R_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_R_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <link name="link_b">
     <visual>
-      <!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-1.170 0 -1.620"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_B_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_B_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="blue"/>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="-1.170 0 -1.620"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/collision/MH50_B_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_B_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <link name="link_t">
     <visual>
+      <origin rpy="0 0 0" xyz="-1.170 0 -1.620"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/visual/MH50_T_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/visual/MH50_T_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
+      <material name="yaskawa_blue"/>
     </visual>
     <collision>
+      <origin rpy="0 0 0" xyz="-1.170 0 -1.620"/>
       <geometry>
-        <mesh filename="package://motoman_mh50_support/meshes/mh50/collision/MH50_T_AXIS.dae"/>
+        <mesh filename="package://motoman_mh50_support/meshes/collision/MH50_T_AXIS.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="yellow"/>
     </collision>
   </link>
+  <link name="tool0"/>
   <!-- end of link list -->
   <!-- joint list -->
   <joint name="joint_s" type="revolute">
     <parent link="base_link"/>
     <child link="link_s"/>
-    <origin rpy="0 0 0" xyz="0 0 0.259"/>
+    <origin rpy="0 0 0" xyz="0 0 0.540"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.14159" upper="3.14159" velocity="2.96"/>
+    <limit effort="4903.32" lower="-3.14159" upper="3.14159" velocity="3.141"/>
   </joint>
   <joint name="joint_l" type="revolute">
     <parent link="link_s"/>
     <child link="link_l"/>
-    <origin rpy="0 0 0" xyz="0.145 -0.1455 0.281"/>
+    <origin rpy="0 0 0" xyz="0.145 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="100" lower="-1.5708" upper="2.35619" velocity="2.96"/>
+    <limit effort="6276.26" lower="-1.57079" upper="2.35619" velocity="3.103"/>
   </joint>
   <joint name="joint_u" type="revolute">
     <parent link="link_l"/>
     <child link="link_u"/>
-    <origin rpy="0 0 0" xyz="-0.0 -0.0095 0.870"/>
+    <origin rpy="0 0 0" xyz="0 0 0.870"/>
     <axis xyz="0 -1 0"/>
-    <!-- Old limits: lower="-2.96706" upper="4.38078" 
-                   The new limits below were measured from an MH50F.  They ensure 
- 		   that link_r won't hit link_l even when joint_r is at 45 degrees.  
-		   The old limits were converted directly from the MH50 data sheet,
-		   which was clearly way off. -->
-    <limit effort="100" lower="-1.55" upper="4.014" velocity="2.96"/>
+    <limit effort="2745.86" lower="-1.39626" upper="3.59538" velocity="3.106"/>
   </joint>
   <joint name="joint_r" type="revolute">
     <parent link="link_u"/>
     <child link="link_r"/>
-    <origin rpy="0 0 0" xyz="0.306 0.155 0.210"/>
+    <origin rpy="0 0 0" xyz="1.025 0 0.210"/>
     <axis xyz="-1 0 0"/>
-    <limit effort="100" lower="-6.28319" upper="6.28319" velocity="3.48"/>
+    <limit effort="823.76" lower="-6.28319" upper="6.28319" velocity="4.363"/>
   </joint>
   <joint name="joint_b" type="revolute">
     <parent link="link_r"/>
     <child link="link_b"/>
-    <origin rpy="0 0 0" xyz="0.7065 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="0 -1 0"/>
-    <limit effort="100" lower="-2.1817" upper="2.1817" velocity="3.48"/>
+    <limit effort="706.08" lower="-2.18167" upper="2.18167" velocity="4.363"/>
   </joint>
   <joint name="joint_t" type="revolute">
     <parent link="link_b"/>
     <child link="link_t"/>
-    <origin rpy="0 0 0" xyz="0.1595 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="-1 0 0"/>
-    <limit effort="100" lower="-6.2831" upper="6.2831" velocity="6.97"/>
+    <limit effort="333.43" lower="-6.2831" upper="6.2831" velocity="6.283"/>
   </joint>
-  <!-- end of joint list -->
-  <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
-  <link name="tool0"/>
-  <joint name="link_6-tool0" type="fixed">
-    <origin rpy="3.14159265359 -1.57079632679 0" xyz="0.0155 0 0"/>
+  <joint name="joint_t-tool0" type="fixed">
+    <origin rpy="3.1415926 -1.570796 0" xyz="0.175 0 0"/>
     <parent link="link_t"/>
     <child link="tool0"/>
+  </joint>
+  <!-- end of joint list -->
+  <!-- ROS base_link to Robot Manufacturer World Coordinates transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.540"/>
+    <parent link="base_link"/>
+    <child link="base"/>
   </joint>
 </robot>
